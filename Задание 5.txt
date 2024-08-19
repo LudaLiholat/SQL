@@ -8,3 +8,6 @@ FROM PC
 WHERE (CD = '12x' OR CD = '24x')
 AND
 PRICE < 600
+
+
+Very good

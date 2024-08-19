@@ -5,3 +5,4 @@
 SELECT *
 FROM printer
 WHERE color = 'y'
+Good
