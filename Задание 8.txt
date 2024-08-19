@@ -1,0 +1,10 @@
+Пример:
+
+Найдите производителя, выпускающего ПК, но не ПК-блокноты.
+
+Решение:
+SELECT maker 
+FROM Product 
+WHERE type IN ('PC')
+AND NOT maker IN ( SELECT maker FROM Product WHERE (type = 'Laptop'))
+GROUP by maker

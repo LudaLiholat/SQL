@@ -1,0 +1,10 @@
+Пример:
+
+Найдите производителей ПК с процессором не менее 450 Мгц. Вывести: Maker
+
+Решение:
+SELECT Maker
+FROM Product INNER JOIN 
+PC ON PC.model = Product.model
+WHERE speed > = 450
+GROUP BY maker
