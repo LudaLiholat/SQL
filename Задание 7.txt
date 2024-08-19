@@ -16,3 +16,7 @@ FROM Printer
 WHERE model IN (SELECT model  FROM Product  WHERE maker = 'B' AND 
 type = 'Printer' )
 ORDER BY price DESC
+
+
+
+Oh 

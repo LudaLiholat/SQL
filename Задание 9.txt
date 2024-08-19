@@ -8,3 +8,8 @@ FROM Product INNER JOIN
 PC ON PC.model = Product.model
 WHERE speed > = 450
 GROUP BY maker
+
+
+
+
+Good
