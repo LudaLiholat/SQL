@@ -1,0 +1,7 @@
+Пример:
+Найдите среднюю скорость ПК.
+
+Решение:
+SELECT AVG(speed) AS AVG_speed
+FROM PC
+

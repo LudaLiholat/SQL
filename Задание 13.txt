@@ -1,0 +1,9 @@
+Пример:
+
+Найдите среднюю скорость ПК, выпущенных производителем A.
+
+Решение:
+SELECT AVG(speed) AS AVG_speed
+FROM PC AS p JOIN Product AS pr
+ON p.model = pr.model
+WHERE maker = 'A'
