@@ -1,0 +1,11 @@
+Пример:
+
+Для каждого производителя, имеющего модели в таблице Laptop, найдите средний размер экрана выпускаемых им ПК-блокнотов.
+Вывести: maker, средний размер экрана.
+
+Решение:
+SELECT maker, AVG(screen) AS AVG_screen
+FROM Laptop JOIN Product ON Laptop.model=Product.model
+WHERE type='Laptop' 
+GROUP BY maker
+
