@@ -1,0 +1,13 @@
+Пример:
+
+Найдите максимальную цену ПК для каждого производителя, модели которого есть в таблице ПК.
+Результат: производитель, максимальная цена.
+
+
+Решение:
+
+SELECT maker, MAX(price)
+
+FROM PC JOIN Product ON PC.model=Product.model
+WHERE type='PC' 
+GROUP BY maker
