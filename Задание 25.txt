@@ -1,0 +1,22 @@
+Пример:
+
+Найдите производителей принтеров, которые также выпускают ПК с наименьшим объемом ОЗУ и самой высокой скоростью процессора среди всех ПК с наименьшим объемом ОЗУ.
+Результат: производитель.
+
+Решение:
+
+WITH MAX_SPEED AS(
+    SELECT MAX(speed) AS 'speed'
+    FROM pc
+    WHERE ram IN (SELECT MIN(ram) FROM pc)
+)
+
+SELECT DISTINCT p.maker
+FROM pc
+INNER JOIN product p ON pc.model = p.model
+WHERE speed IN (SELECT speed FROM MAX_SPEED)
+AND ram IN (SELECT MIN(ram) FROM pc)
+INTERSECT
+SELECT maker
+FROM product
+WHERE type = 'Printer'
